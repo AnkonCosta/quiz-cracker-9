@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Topics from './components/Topics/Topics';
 import Blog from './components/Blog/Blog';
 import Four404Four from './components/Four404Four/Four404Four';
+import Quizes from './components/Quizes/Quizes';
 
 function App() {
 
@@ -20,6 +21,13 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Home></Home>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <Quizes ></Quizes>
         },
         {
           path: '/topics',
