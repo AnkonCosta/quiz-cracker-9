@@ -6,6 +6,7 @@ const Quizes = () => {
     const quiz = useLoaderData().data;
     const { name, id, questions } = quiz;
 
+
     return (
         <div className='bg-questions'>
             <div className='py-12 md:w-6/12 mx-auto'>
@@ -17,6 +18,7 @@ const Quizes = () => {
                         questions.map(allQuestion => <Questions
                             key={allQuestion.id}
                             allQuestion={allQuestion}
+                            questions={questions}
                         ></Questions>)
                     }
                 </div>
