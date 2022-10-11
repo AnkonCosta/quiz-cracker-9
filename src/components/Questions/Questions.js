@@ -12,7 +12,10 @@ const Questions = ({ allQuestion, questions }) => {
     const [ansTest, setAnsTest] = useState();
     const notify = (event) => {
         if (correctAnswer === event.target.innerText) {
-            console.log('go')
+            toast('The answer is correct.')
+        }
+        else {
+            toast('The answer is wrong.')
         }
     }
     // for showing correct answer  
