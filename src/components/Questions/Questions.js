@@ -2,6 +2,7 @@ import React from 'react';
 import './Questions.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BeakerIcon, EyeIcon } from '@heroicons/react/24/solid'
 
 
 
@@ -18,7 +19,10 @@ const Questions = ({ allQuestion, questions }) => {
         <div>
 
             <div className='my-12 border bg-white text-black  drop-shadow-2xl p-5'>
-                <h2><code className='text-xl font-bold'>{question}</code></h2>
+                <div className='flex justify-around'>
+                    <h2><code className='text-xl font-bold'>{question} </code></h2>
+                    <p><EyeIcon className="h-6 w-6 text-blue-500" /> </p>
+                </div>
                 {/* <div className='grid grid-cols-2 gap-5 my-5' >
                     {
                         options.map(option => <p className='border border-black '>{option}</p>)
