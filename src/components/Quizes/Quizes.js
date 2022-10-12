@@ -25,7 +25,7 @@ const Quizes = () => {
 
 
     return (
-        <div className='bg-questions'>
+        <div className='bg-questions '>
             < ToastContainer />
             <div className='py-12 md:w-6/12 mx-auto'>
                 <div>

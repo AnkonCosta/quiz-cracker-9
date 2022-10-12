@@ -30,7 +30,7 @@ const Questions = ({ allQuestion, questions, answer }) => {
 
     return (
 
-        <div>
+        <div className='z-10'>
 
 
 
