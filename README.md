@@ -1,3 +1,34 @@
+Skill Test is a skill checking website. Through this website you can test your coding skill through quizes.
+
+Visit our site to have your skill test:
+[https://ankon-quiz.netlify.app/]
+
+There are 4 types of topics. 
+1. React
+2. JavaScript
+3. CSS
+4. Git
+
+
+Features:
+
+1. If you are in trouble in not getting the correct answer, worry not, our advanced feature you show you the correct answer if you click the eye button.
+
+2. You can see the quiz stats in [https://ankon-quiz.netlify.app/statistics] this page. As simple as you could ever think of.
+
+3. You can also read the blog page to get your confusion out of your mind. There are a lot of solution of your serious problems.
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
