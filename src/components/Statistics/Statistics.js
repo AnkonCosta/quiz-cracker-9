@@ -3,10 +3,11 @@ import { useLoaderData } from 'react-router-dom';
 import { Area, Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 
-const Topics = () => {
+const Statistics = () => {
     const data = useLoaderData().data;
     return (
         <div >
+
             <div className='mb-12'>
                 <h1 className='text-2xl font-bold'>See the quiz Statistics</h1>
             </div>
@@ -23,9 +24,10 @@ const Topics = () => {
                         <Line type="monotone" dataKey="name" stroke="#ff7300" />
                     </ComposedChart>
                 </ResponsiveContainer>
+
             </div>
         </div>
     );
 };
 
-export default Topics;
+export default Statistics;

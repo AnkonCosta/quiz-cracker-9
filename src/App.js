@@ -3,10 +3,12 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layouts/Main';
 import Home from './components/Home/Home';
-import Topics from './components/Topics/Topics';
+import Topics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Four404Four from './components/Four404Four/Four404Four';
 import Quizes from './components/Quizes/Quizes';
+import Contact from './components/Contact/Contact';
+import Statistics from './components/Statistics/Statistics';
 
 function App() {
 
@@ -30,15 +32,19 @@ function App() {
           element: <Quizes ></Quizes>
         },
         {
-          path: '/topics',
+          path: '/statistics',
           loader: () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
-          element: <Topics></Topics>
+          element: <Statistics></Statistics>
         },
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/contact',
+          element: <Contact></Contact>
         }
       ]
     },

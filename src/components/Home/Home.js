@@ -8,8 +8,9 @@ const Home = () => {
     // console.log(courses.data)
     return (
         <div className='w-10/12 my-12 mx-auto'>
-            <div className='border border-gray-100 text-3xl py-6 text-white text-bold bg-blue-400'>
-                <img src='computer.jpg' alt="" />
+            <div className='border border-blue-200 shadow-lg text-3xl p-6 text-white text-bold  md:flex justify-between items-center font-bold'>
+                <img className='md:w-6/12' src='computer.jpg' alt="" />
+                <h1 className='text-blue-500 text-4xl'>Let You Know Your Skills</h1>
             </div>
 
             {/* courses starts here */}
@@ -22,6 +23,7 @@ const Home = () => {
                 }
             </section>
             {/* courses ends here */}
+
         </div>
     );
 };

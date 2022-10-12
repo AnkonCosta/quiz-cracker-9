@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import './Questions.css';
+import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { EyeIcon } from '@heroicons/react/24/solid'
 
 
 
 const Questions = ({ allQuestion, questions }) => {
     const { id, question, options, correctAnswer } = allQuestion;
 
-    const [ansTest, setAnsTest] = useState();
-    const notify = (event) => {
-        if (correctAnswer === event.target.innerText) {
-            toast('The answer is correct.')
+
+    const answer = (e) => {
+        const same = questions.find(q => q.correctAnswer === e.target.innerText);
+        if (same) {
+            toast('Your answer is correct.')
+            return
         }
         else {
-            toast('The answer is wrong.')
+            toast('Your answer is wrong.')
         }
     }
+
     // for showing correct answer  
     const [ans, setAns] = useState();
 
@@ -42,16 +45,16 @@ const Questions = ({ allQuestion, questions }) => {
                 </div>
 
                 <div className='grid grid-cols-1 gap-5 my-5' >
-                    <ToastContainer />
+
                     {
                         options.map(option => <div className="form-control  text-start px-12" >
-                            <label onClick={notify} className="label  cursor-pointer">
+                            <label className="label  cursor-pointer">
                                 <input type="radio" name="radio-6" className="radio checked:bg-red-500" />
-                                <span className="label-text">{option}</span>
-
-                                <p>{ansTest}</p>
+                                <span onClick={answer}> {option}</span>
 
                             </label>
+                            <ToastContainer />
+
 
                         </div>
                         )
