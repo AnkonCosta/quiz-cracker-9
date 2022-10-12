@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
 import './Questions.css';
 import { EyeIcon } from '@heroicons/react/24/solid'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Questions = ({ allQuestion, questions }) => {
+const Questions = ({ allQuestion, questions, answer }) => {
     const { id, question, options, correctAnswer } = allQuestion;
 
 
-    const answer = (e) => {
-        const same = questions.find(q => q.correctAnswer === e.target.innerText);
-        if (same) {
-            toast('Your answer is correct.')
-            return
-        }
-        else {
-            toast('Your answer is wrong.')
-        }
-    }
+    // const answer = (e) => {
+    //     const same = questions.find(q => q.correctAnswer === e.target.innerText);
+    //     if (same) {
+    //         toast('Your answer is correct.')
+    //         return
+    //     }
+    //     else {
+    //         toast('Your answer is wrong.')
+    //     }
+    // }
 
     // for showing correct answer  
     const [ans, setAns] = useState();
@@ -33,6 +31,7 @@ const Questions = ({ allQuestion, questions }) => {
     return (
 
         <div>
+
 
 
             <div className='my-12 border bg-white text-black  drop-shadow-2xl p-5'>
@@ -53,16 +52,19 @@ const Questions = ({ allQuestion, questions }) => {
                                 <span onClick={answer}> {option}</span>
 
                             </label>
-                            <ToastContainer />
+
 
 
                         </div>
                         )
+
                     }
+
 
                 </div>
 
             </div>
+
 
         </div >
     );
