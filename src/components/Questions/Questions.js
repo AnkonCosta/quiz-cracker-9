@@ -8,16 +8,6 @@ const Questions = ({ allQuestion, questions, answer }) => {
     const { id, question, options, correctAnswer } = allQuestion;
 
 
-    // const answer = (e) => {
-    //     const same = questions.find(q => q.correctAnswer === e.target.innerText);
-    //     if (same) {
-    //         toast('Your answer is correct.')
-    //         return
-    //     }
-    //     else {
-    //         toast('Your answer is wrong.')
-    //     }
-    // }
 
     // for showing correct answer  
     const [ans, setAns] = useState();
@@ -39,7 +29,7 @@ const Questions = ({ allQuestion, questions, answer }) => {
                     <h2><code className='text-xl font-bold'>{question} </code></h2>
                     <p title='Show Correct Answer.' onClick={eyeBtn}><EyeIcon className="h-6 w-6 text-blue-500" /> </p>
                 </div>
-                <div className=' text-black py-3 shadow shadow-lg'>
+                <div className=' text-black  py-3 shadow shadow-lg'>
                     <h1 className='font-bold'>{'Correct Answer:'} <span className='text-blue-600'>{ans}</span> </h1>
                 </div>
 
@@ -47,9 +37,9 @@ const Questions = ({ allQuestion, questions, answer }) => {
 
                     {
                         options.map(option => <div className="form-control  text-start px-12" >
-                            <label className="label  cursor-pointer">
+                            <label className="label flex justify-start text-center md:pl-12 cursor-pointer">
                                 <input type="radio" name="radio-6" className="radio checked:bg-red-500" />
-                                <span onClick={answer}> {option}</span>
+                                <span className='' onClick={answer}> {option}</span>
 
                             </label>
 
