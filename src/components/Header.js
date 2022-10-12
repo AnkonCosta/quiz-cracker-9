@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className='flex justify-between items-center shadow-lg z-10 sticky bg-white top-0 px-12 py-5 '>
             <div>
-                <h2 className='text-2xl text-blue-500 font-bold'>Skill Set</h2>
+                <h2 className='text-2xl text-blue-500 font-bold '><Link to='/'>Skill Set</Link></h2>
             </div>
             <div className='font-bold text-blue-500 '>
                 <Bars3Icon onClick={() => setOpen(!open)} className='w-8 md:hidden'></Bars3Icon>
